@@ -6,24 +6,53 @@
     <style>
       body {
         font-family: sans-serif;
-        padding: 20px;
+        background-color: #f5f5f5;
+        margin: 20px;
       }
-      button {
-        padding: 10px 20px;
-        margin: 5px;
+
+      #lamp_container {
+        width: 120px;
+        height: 120px;
+        background-color: #fff;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
       }
-      #status {
-        margin-top: 10px;
-        font-weight: bold;
+
+      #light\.table_lamp {
+        font-size: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+
+      #light\.table_lamp[data-status="on"] {
+        background-color: #4cd137;
+      }
+
+      #light\.table_lamp[data-status="off"] {
+        background-color: #e84118;
+      }
+
+      .lamp-label {
+        margin-top: 8px;
+        font-size: 14px;
+        color: #333;
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <h2>Table Lamp Dashboard</h2>
-
-    <button id="onBtn">Turn On</button>
-    <button id="offBtn">Turn Off</button>
-    <div id="status">Status: unknown</div>
+    <div
+      id="lamp_container"
+      onclick="callService(ws, 'light', 'toggle', 'light.table_lamp')"
+    >
+      <div class="status" id="light.table_lamp" data-status="on"></div>
+      <div class="lamp-label">Table Lamp</div>
+    </div>
 
     <script src="config.js"></script>
     <script src="main.js"></script>
