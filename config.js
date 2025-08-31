@@ -1,2 +1,0 @@
-const long_lived_access_tokens =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI5ZDdlYjNjM2UwZDA0Njc1OWJjMTU0NTI3OWM4YmRhYyIsImlhdCI6MTc1NjU4MzU0NCwiZXhwIjoyMDcxOTQzNTQ0fQ.HmQlbar5Cqfav5xjtT5HVnSWKRfyTwKe03F5FCZ8a3k";
